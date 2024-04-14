@@ -1,0 +1,26 @@
+Assignment 1: 
+      Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm.
+Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry run of your algorithm.
+
+ Start
+Input an array of integers
+Set n to the length of array
+Repeat the following steps for i from 0 to n-1:
+Repeat the following steps for j from 0 to n-i-1:
+If the element at index j is greater than the element at index j+1:
+Swap the elements at index j and j+1
+End
+
+Assignment 2:
+    Recursive Function and Efficiency Analysis - Write a recursive function pseudocode and calculate the nth Fibonacci
+number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the pros and cons in terms of space and time complexity.
+
+start
+Function fibonacci(n):
+    if (n==0):
+        Return 0
+    else if(n==1)
+        Return 1
+    else
+        Return fibonacci(n-1) + fibonacci(n-2)
+end
