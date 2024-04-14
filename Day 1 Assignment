@@ -9,3 +9,41 @@ and then outputs the result. Incorporate conditional and looping constructs.
  cube is odd
 end
         }
+
+Assignment 2:
+
+Flowchart Creation - Design a flowchart that outlines the logic for a user login process. It should include conditional paths for successful and 
+unsuccessful login attempts, and a loop that allows a user three attempts before locking the account.
+
+1. Start
+
+2. Initialize variables:
+    attempts = 0
+    max attempts = 3
+3. Loop while attempts < max_attempts:
+    Prompt the user for username and password
+    Read the input username and password
+    Validate the username and password against the database
+    If validation is successful:
+       Display "Login successful"
+       Proceed to user dashboard
+       End the program
+   If validation is unsuccessful:
+       Increment attempts by 1
+       Display "Login unsuccessful. Please try again."
+4. If attempts = max_attempts:
+       Lock the user account
+       Display "Maximum login attempts reached. Your account is locked."
+      
+5.End
+
+Assignment 3:
+Function Design and Modularization - Create a document that describes the design of two modular functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number.
+Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+start
+ if (n == 0)    
+    return 1
+  else    
+    return(n * factorial(n-1))   
+end
