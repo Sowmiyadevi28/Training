@@ -1,0 +1,103 @@
+b) Write a function named PerformLinearSearch that searches for a specific element in an array and returns the index of the element if found or -1 if not found.
+
+public class LinearSearch {
+
+    public static int performLinearSearch(int[] arr, int target) {
+      
+        for (int i = 0; i < arr.length; i++) {
+           
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+      
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2, 4, 6, 8, 10};
+        int targetElement = 6;
+        int index = performLinearSearch(array, targetElement);
+        if (index != -1) {
+            System.out.println("Element found at index: " + index);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+    }
+}
+
+
+
+Task 8: Advanced Array Operations
+a)  Implement a method SliceArray that takes an array, a starting index, and an end index, then returns a new array containing the elements from the start to the end index.
+
+
+import java.util.Arrays;
+
+public class ArraySlicer {
+
+    public static int[] sliceArray(int[] arr, int startIndex, int endIndex) {
+       
+        if (startIndex < 0 || endIndex < 0 || startIndex >= arr.length || endIndex >= arr.length || startIndex > endIndex) {
+            throw new IllegalArgumentException("Invalid start or end index");
+        }
+
+        
+        int newLength = endIndex - startIndex + 1;
+
+       
+        int[] slicedArray = new int[newLength];
+
+        
+        for (int i = startIndex, j = 0; i <= endIndex; i++, j++) {
+            slicedArray[j] = arr[i];
+        }
+
+       
+        return slicedArray;
+    }
+
+    public static void main(String[] args) {
+        int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int startIndex = 2;
+        int endIndex = 6;
+
+        int[] slicedArray = sliceArray(originalArray, startIndex, endInd
+
+
+
+b) Create a recursive function to find the nth element of a Fibonacci sequence and store the first n elements in an array.
+
+
+
+public class Fibonacci {
+  
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    
+    public static int[] generateFibonacciArray(int n) {
+        int[] fibonacciArray = new int[n];
+        for (int i = 0; i < n; i++) {
+            fibonacciArray[i] = fibonacci(i);
+        }
+        return fibonacciArray;
+    }
+
+    public static void main(String[] args) {
+        int n = 10; // Change n to generate the first n Fibonacci numbers
+        int[] fibonacciArray = generateFibonacciArray(n);
+        
+        System.out.println("First " + n + " Fibonacci numbers:");
+        System.out.println(Arrays.toString(fibonacciArray));
+        
+        int nthElement = fibonacci(n - 1); // Finding the nth element (index is n-1)
+        System.out.println("The " + n + "th Fibonacci number is: " + nthElement);
+    }
+}
+
