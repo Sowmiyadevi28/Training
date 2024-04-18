@@ -1,0 +1,127 @@
+Array Sorting and Searching
+a) Implement a function called BruteForceSort that sorts an array using the brute force approach. Use this function to sort an array created with InitializeArray.
+
+
+public class BruteForceSort {
+
+   
+    public static int[] initializeArray(int size, int min, int max) {
+        int[] array = new int[size];
+        Random rand = new Random();
+        for (int i = 0; i < size; i++) {
+            array[i] = rand.nextInt(max - min + 1) + min;
+        }
+        return array;
+    }
+
+   
+    public static void bruteForceSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 1; i < n; i++) {
+                if (arr[i - 1] > arr[i]) {
+                  
+                    int temp = arr[i - 1];
+                    arr[i - 1] = arr[i];
+                    arr[i] = temp;
+                    swapped = true;
+                }
+            }
+        } while (swapped);
+    }
+
+    public static void main(String[] args) {
+        int size = 10; 
+        int min = 1;
+        int max = 100;
+
+      
+        int[] array = initializeArray(size, min, max);
+
+        System.out.println("Original array: " + Arrays.toString(array));
+
+        
+        bruteForceSort(array);
+
+        System.out.println("Sorted array: " + Arrays.toString(array));
+    }
+}
+
+
+ Implement a function called BruteForceSort that sorts an array using the brute force approach. Use this function to sort an array created with InitializeArray.
+
+
+
+public class BruteForceSort {
+
+  
+    public static int[] initializeArray(int size, int min, int max) {
+        int[] array = new int[size];
+        Random rand = new Random();
+        for (int i = 0; i < size; i++) {
+            array[i] = rand.nextInt(max - min + 1) + min;
+        }
+        return array;
+    }
+
+   
+    public static void bruteForceSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 1; i < n; i++) {
+                if (arr[i - 1] > arr[i]) {
+                  
+                    int temp = arr[i - 1];
+                    arr[i - 1] = arr[i];
+                    arr[i] = temp;
+                    swapped = true;
+                }
+            }
+        } while (swapped);
+    }
+
+    public static void main(String[] args) {
+        int size = 10; 
+        int min = 1; 
+        int max = 100; 
+
+      
+        int[] array = initializeArray(size, min, max);
+
+        System.out.println("Original array: " + Arrays.toString(array));
+
+        
+        bruteForceSort(array);
+
+        System.out.println("Sorted array: " + Arrays.toString(array));
+    }
+}
+
+
+Task 6: Understanding Functions through Arrays
+a) Write a recursive function named SumArray that calculates and returns the sum of elements in an array, demonstarte with example.
+
+
+public class ArraySum {
+
+    public static int sumArray(int[] arr, int index) {
+       
+        if (index >= arr.length) {
+            return 0;
+        }
+       
+        return arr[index] + sumArray(arr, index + 1);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int sum = sumArray(array, 0);
+        System.out.println("Sum of array elements: " + sum);
+    }
+}
+
+
